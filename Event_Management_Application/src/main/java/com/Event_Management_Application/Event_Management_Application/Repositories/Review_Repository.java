@@ -1,4 +1,7 @@
 package com.Event_Management_Application.Event_Management_Application.Repositories;
 
-public interface Review_Repository {
+import com.Event_Management_Application.Event_Management_Application.Models.Review;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface Review_Repository extends JpaRepository<Review, Long> {
 }
