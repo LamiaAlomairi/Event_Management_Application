@@ -34,7 +34,7 @@ public class Event {
     @JsonIgnore
     private List<Ticket> tickets;
 
-    @ManyToMany(mappedBy = "event")
+    @ManyToMany
     @JoinTable(name = "event_attendees", joinColumns = @JoinColumn(name = "event_id"), inverseJoinColumns = @JoinColumn(name = "attendee_id"))
     private List<Attendee> attendees;
 
@@ -42,11 +42,11 @@ public class Event {
     @JsonIgnore
     private List<Review> reviews;
 
-    @ManyToMany(mappedBy = "event")
+    @ManyToMany
     @JoinTable(name = "event_sponsor", joinColumns = @JoinColumn(name = "event_id"), inverseJoinColumns = @JoinColumn(name = "sponsor_id"))
     private List<Sponsor> sponsors;
 
-    @ManyToMany(mappedBy = "event")
+    @ManyToMany
     @JoinTable(name = "event_vendor", joinColumns = @JoinColumn(name = "event_id"), inverseJoinColumns = @JoinColumn(name = "vendor_id"))
     private List<Vendor> vendors;
 
