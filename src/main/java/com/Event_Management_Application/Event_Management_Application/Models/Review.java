@@ -17,4 +17,8 @@ public class Review {
     Long id;
     Integer rating_out_of_5;
     String comment;
+
+    @ManyToOne
+    @JoinColumn(name = "event_id", referencedColumnName = "id")
+    Event event;
 }

@@ -21,4 +21,7 @@ public class Ticket {
     String sale_start_date;
     String sale_end_date;
 
+    @ManyToOne
+    @JoinColumn(name = "event_id", referencedColumnName = "id")
+    Event event;
 }

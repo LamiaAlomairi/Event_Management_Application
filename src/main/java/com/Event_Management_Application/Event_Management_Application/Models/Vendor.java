@@ -1,10 +1,12 @@
 package com.Event_Management_Application.Event_Management_Application.Models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Getter
 @Setter
@@ -21,4 +23,8 @@ public class Vendor {
     Boolean retailers_type;
     Boolean maintenance_type;
     Boolean service_type;
+
+    @ManyToMany(mappedBy = "vendors")
+    @JsonIgnore
+    private List<Event> events;
 }

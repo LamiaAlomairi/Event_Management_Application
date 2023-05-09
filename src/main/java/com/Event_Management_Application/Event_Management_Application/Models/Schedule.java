@@ -18,4 +18,7 @@ public class Schedule {
     String date;
     String title;
 
+    @ManyToOne
+    @JoinColumn(name = "event_id", referencedColumnName = "id")
+    Event event;
 }
