@@ -18,11 +18,11 @@ public class Vendor {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
     String name;
-    Boolean manufacturers_type;
-    Boolean wholesalers_type;
-    Boolean retailers_type;
-    Boolean maintenance_type;
-    Boolean service_type;
+    Boolean manufacturersType;
+    Boolean wholesalersType;
+    Boolean retailersType;
+    Boolean maintenanceType;
+    Boolean serviceType;
 
     @ManyToMany(mappedBy = "vendors")
     @JsonIgnore

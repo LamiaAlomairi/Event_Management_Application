@@ -1,23 +1,23 @@
 package com.Event_Management_Application.Event_Management_Application.Services;
 
 import com.Event_Management_Application.Event_Management_Application.Models.Vendor;
-import com.Event_Management_Application.Event_Management_Application.Repositories.Vendor_Repository;
+import com.Event_Management_Application.Event_Management_Application.Repositories.VendorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class Vendor_Service {
+public class VendorService {
     @Autowired
-    Vendor_Repository vendor_repository;
+    VendorRepository vendorRepository;
     public List<Vendor> getAllVendors() {
 
-        return vendor_repository.findAll();
+        return vendorRepository.findAll();
     }
 
     public Vendor getVendorById(Long id) {
 
-        return vendor_repository.findById(id).get();
+        return vendorRepository.findById(id).get();
     }
 }

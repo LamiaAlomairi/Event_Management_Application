@@ -3,5 +3,5 @@ package com.Event_Management_Application.Event_Management_Application.Repositori
 import com.Event_Management_Application.Event_Management_Application.Models.Ticket;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface Ticket_Repository extends JpaRepository<Ticket, Long> {
+public interface TicketRepository extends JpaRepository<Ticket, Long> {
 }

@@ -15,11 +15,11 @@ public class Ticket {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
-    String type_VIP_general;
+    String typeVIPGeneral;
     Double price;
     Integer quantity;
-    String sale_start_date;
-    String sale_end_date;
+    String saleStartDate;
+    String saleEndDate;
 
     @ManyToOne
     @JoinColumn(name = "event_id", referencedColumnName = "id")

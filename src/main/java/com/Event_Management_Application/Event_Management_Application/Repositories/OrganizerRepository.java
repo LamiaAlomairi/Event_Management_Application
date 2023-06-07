@@ -3,5 +3,5 @@ package com.Event_Management_Application.Event_Management_Application.Repositori
 import com.Event_Management_Application.Event_Management_Application.Models.Organizer;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface Organizer_Repository extends JpaRepository<Organizer, Long> {
+public interface OrganizerRepository extends JpaRepository<Organizer, Long> {
 }

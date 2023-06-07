@@ -3,5 +3,5 @@ package com.Event_Management_Application.Event_Management_Application.Repositori
 import com.Event_Management_Application.Event_Management_Application.Models.Venue;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface Venue_Repository extends JpaRepository<Venue, Long> {
+public interface VenueRepository extends JpaRepository<Venue, Long> {
 }

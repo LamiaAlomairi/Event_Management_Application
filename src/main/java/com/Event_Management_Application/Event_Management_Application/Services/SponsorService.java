@@ -1,23 +1,23 @@
 package com.Event_Management_Application.Event_Management_Application.Services;
 
 import com.Event_Management_Application.Event_Management_Application.Models.Sponsor;
-import com.Event_Management_Application.Event_Management_Application.Repositories.Sponsor_Repository;
+import com.Event_Management_Application.Event_Management_Application.Repositories.SponsorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class Sponsor_Service {
+public class SponsorService {
     @Autowired
-    Sponsor_Repository sponsor_repository;
+    SponsorRepository sponsorRepository;
     public List<Sponsor> getAllSponsors() {
 
-        return sponsor_repository.findAll();
+        return sponsorRepository.findAll();
     }
 
     public Sponsor getSponsorById(Long id) {
 
-        return sponsor_repository.findById(id).get();
+        return sponsorRepository.findById(id).get();
     }
 }

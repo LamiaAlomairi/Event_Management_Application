@@ -1,23 +1,23 @@
 package com.Event_Management_Application.Event_Management_Application.Services;
 
 import com.Event_Management_Application.Event_Management_Application.Models.Ticket;
-import com.Event_Management_Application.Event_Management_Application.Repositories.Ticket_Repository;
+import com.Event_Management_Application.Event_Management_Application.Repositories.TicketRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class Ticket_Service {
+public class TicketService {
     @Autowired
-    Ticket_Repository ticket_repository;
+    TicketRepository ticketRepository;
     public List<Ticket> getAllTickets() {
 
-        return ticket_repository.findAll();
+        return ticketRepository.findAll();
     }
 
     public Ticket getTicketById(Long id) {
 
-        return ticket_repository.findById(id).get();
+        return ticketRepository.findById(id).get();
     }
 }

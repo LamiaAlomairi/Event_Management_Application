@@ -1,23 +1,23 @@
 package com.Event_Management_Application.Event_Management_Application.Services;
 
 import com.Event_Management_Application.Event_Management_Application.Models.Event;
-import com.Event_Management_Application.Event_Management_Application.Repositories.Event_Repository;
+import com.Event_Management_Application.Event_Management_Application.Repositories.EventRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class Event_Service {
+public class EventService {
     @Autowired
-    Event_Repository event_repository;
+    EventRepository eventRepository;
     public List<Event> getAllEvents() {
 
-        return event_repository.findAll();
+        return eventRepository.findAll();
     }
 
     public Event getEventById(Long id) {
 
-        return event_repository.findById(id).get();
+        return eventRepository.findById(id).get();
     }
 }
